@@ -19,39 +19,22 @@ function App() {
   }, []);
 
   return (
-    <main className="flex items-start justify-center h-screen bg-blue-500">
-      <div className="text-4xl font-bold text-white">
-        <h1 id="typing" aria-label={TEXT}>
-          {typed}
-        </h1>
-      </div>
+    <main className="grid grid-cols-[auto_1fr_1fr_1fr] grid-rows-[auto_1fr] gap-4 min-h-screen p-2">
 
-      <div className="info">
-        <div className="summary">
-          <p>
-            Penultimate year Computer Science student at the University of
-            Sussex.
-          </p>
-          <p>
-            I am currently seeking placement year opportunites focused on
-            Software Engineering and Data Science, however I am open to all
-            aspects of the Informatics field.
-          </p>
-          <p>
-            I am currently employed as a Kitchen Assistant in a Care UK home.
-          </p>
-        </div>
-      </div>
-
-      <footer className="sidenav">
-        <div className="media">
+      <div className="col-start-1 row-span-full flex flex-col justify-start items-center bg-gray-200 p-4 rounded-lg shadow-sm">
+        <div className="media flex flex-col gap-10">
           <a
             href="https://www.linkedin.com/in/patrick-thomas-499b61364/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Patrick on LinkedIn"
           >
-            <img src="public\images\linkedin.png" alt="" width="32" height="32" />
+            <img
+              src="/images/linkedin.png"
+              alt="LinkedIn"
+              width="32"
+              height="32"
+            />
           </a>
           <a
             href="https://github.com/pxtrickt"
@@ -59,13 +42,23 @@ function App() {
             rel="noopener noreferrer"
             aria-label="Patrick on GitHub"
           >
-            <img src="public\images\github.png" alt="" width="32" height="32" />
+            <img src="/images/github.png" alt="GitHub" width="32" height="32" />
           </a>
           <a href="mailto:p4trickthom4as@gmail.com" aria-label="Email Patrick">
-            <img src="public\images\email.png" alt="" width="32" height="32" />
+            <img src="/images/email.png" alt="Email" width="32" height="32" />
           </a>
         </div>
-      </footer>
+      </div>
+
+      <div className="p-5 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl col-start-2 col-span-3">
+        <h1 id="typing" aria-label={TEXT}>
+          {typed}
+        </h1>
+      </div>
+
+
+
+      
     </main>
   );
 }
