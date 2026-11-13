@@ -19,8 +19,8 @@ function App() {
   }, []);
 
   return (
-    <main className="content">
-      <div className="heading">
+    <main className="flex items-start justify-center h-screen bg-blue-500">
+      <div className="text-4xl font-bold text-white">
         <h1 id="typing" aria-label={TEXT}>
           {typed}
         </h1>
