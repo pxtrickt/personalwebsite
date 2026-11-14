@@ -4,7 +4,6 @@ import "./App.css";
 const TEXT = "Hey, I'm Patrick";
 const SPEED = 200;
 
-
 function App() {
   const [typed, setTyped] = useState("");
 
@@ -64,9 +63,7 @@ function App() {
             <h3 class="flex h-14 cursor-pointer items-center font-bold">
               Experience
             </h3>
-            <p class="mb-2">
-
-            </p>
+            <p class="mb-2"></p>
           </span>
         </label>
       </section>
@@ -78,15 +75,23 @@ function App() {
             <h3 class="flex h-14 cursor-pointer items-center font-bold">
               Projects
             </h3>
-            <p class="mb-2">
+            <p class="mb-2"></p>
+          </span>
+        </label>
+      </section>
 
-            </p>
+      <section class="place-items-center">
+        <label>
+          <input class="peer/showLabel absolute scale-0" type="checkbox" />
+          <span class="block max-h-14 max-w-xs overflow-hidden bg-[#90AEAD] px-4 py-0 text-[#E64833] shadow-lg transition-all duration-300 peer-checked/showLabel:max-h-52">
+            <h3 class="flex h-14 cursor-pointer items-center font-bold">
+              Hobbies
+            </h3>
+            <p class="mb-2"></p>
           </span>
         </label>
       </section>
     </main>
-
-    
   );
 }
 
