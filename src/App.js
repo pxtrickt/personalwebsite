@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-const TEXT = "Hey, I'm Patrick.";
+const TEXT = "Hey, I'm Patrick";
 const SPEED = 200;
+
 
 function App() {
   const [typed, setTyped] = useState("");
@@ -19,9 +20,8 @@ function App() {
   }, []);
 
   return (
-    <main className="grid grid-cols-[auto_1fr_1fr_1fr] grid-rows-[auto_1fr] gap-4 min-h-screen p-2">
-
-      <div className="col-start-1 row-span-full flex flex-col justify-start items-center bg-gray-200 p-4 rounded-lg shadow-sm">
+    <main className="scanlines grid grid-cols-[auto_1fr_1fr_1fr] grid-rows-[auto_1fr] gap-4 min-h-screen p-2 bg-[#244855]">
+      <div className="col-start-1 row-span-full flex flex-col justify-start items-center bg-[#FBE9D0] p-4 shadow-sm border-solid">
         <div className="media flex flex-col gap-10">
           <a
             href="https://www.linkedin.com/in/patrick-thomas-499b61364/"
@@ -50,16 +50,43 @@ function App() {
         </div>
       </div>
 
-      <div className="p-5 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl col-start-2 col-span-3">
+      <div className="text-2xl md:text-8xl pl-2 my-2 border-l-4 font-bold border-teal-400 text-[#E64833] col-start-2 col-span-3 font-mono-jb">
         <h1 id="typing" aria-label={TEXT}>
           {typed}
+          <span class="blinking-dot">.</span>
         </h1>
       </div>
 
+      <section class="place-items-center">
+        <label>
+          <input class="peer/showLabel absolute scale-0" type="checkbox" />
+          <span class="block max-h-14 max-w-xs overflow-hidden bg-[#90AEAD] px-4 py-0 text-[#E64833] shadow-lg transition-all duration-300 peer-checked/showLabel:max-h-52">
+            <h3 class="flex h-14 cursor-pointer items-center font-bold">
+              Experience
+            </h3>
+            <p class="mb-2">
 
+            </p>
+          </span>
+        </label>
+      </section>
 
-      
+      <section class="place-items-center">
+        <label>
+          <input class="peer/showLabel absolute scale-0" type="checkbox" />
+          <span class="block max-h-14 max-w-xs overflow-hidden bg-[#90AEAD] px-4 py-0 text-[#E64833] shadow-lg transition-all duration-300 peer-checked/showLabel:max-h-52">
+            <h3 class="flex h-14 cursor-pointer items-center font-bold">
+              Projects
+            </h3>
+            <p class="mb-2">
+
+            </p>
+          </span>
+        </label>
+      </section>
     </main>
+
+    
   );
 }
 

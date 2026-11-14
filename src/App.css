@@ -1,9 +1,6 @@
 .App {
   text-align: center;
-  font-family: "JetBrains Mono", monospace;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Chewy&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 .App-header {
   background-color: #282c34;
@@ -14,9 +11,33 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: "Chewy", system-ui;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.scanlines {
+  background-color: #244855;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.18) 50%,
+    transparent 50%
+  );
+  background-size: 100% 4px;
+}
+
+.blinking-dot {
+  animation: fade-blink 1s steps(1, end) infinite;
+}
+
+@keyframes fade-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
