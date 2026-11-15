@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 const TEXT = "Hey, I'm Patrick";
+const TEXT2 = "This is my website!";
 const SPEED = 200;
 
 function App() {
@@ -14,13 +15,12 @@ function App() {
       setTyped(TEXT.slice(0, i));
       if (i >= TEXT.length) clearInterval(timer);
     }, SPEED);
-
     return () => clearInterval(timer);
   }, []);
 
   return (
     <main className="flex flex-col md:grid md:grid-cols-[auto_1fr_1fr_1fr] md:grid-rows-[auto_1fr] gap-4 min-h-screen p-2">
-      <div className="md:col-start-1 md:row-span-full flex flex-row md:flex-col justify-center md:justify-start items-center bg-[#FBE9D0] p-4 shadow-sm">
+      <div className="md:col-start-1 md:row-span-full flex flex-row md:flex-col justify-center md:justify-start items-center bg-[#FBE9D0] p-4 shadow-sm border-[#874F41] border-2">
         <div className="media flex flex-row md:flex-col gap-8 md:gap-20">
           <a
             href="https://www.linkedin.com/in/patrick-thomas-499b61364/"
@@ -49,7 +49,7 @@ function App() {
         </div>
       </div>
 
-      <div className="text-4xl md:text-8xl pl-2 my-2 border-l-4 font-bold border-teal-400 text-[#E64833] md:col-start-2 md:col-span-3 font-mono-jb break-words">
+      <div className="text-4xl md:text-8xl pl-2 my-2 border-l-4 font-bold border-[#874F41] text-[#E64833] md:col-start-2 md:col-span-3 font-mono-jb break-words">
         <h1 id="typing" aria-label={TEXT}>
           {typed}
           <span className="blinking-dot">.</span>
@@ -57,7 +57,7 @@ function App() {
       </div>
 
       <section>
-        <div className="block w-full max-w-2xl bg-[#FBE9D0] px-4 py-0 text-[#E64833] shadow-lg">
+        <div className="block w-full max-w-2xl bg-[#FBE9D0] px-4 py-2 text-[#E64833] shadow-lg">
           <h3 className="text-xl md:text-3xl flex h-14 items-center font-bold">
             Experience
             <span className="blinking-dot">.</span>
@@ -134,7 +134,7 @@ function App() {
       </section>
 
       <section>
-        <div className="block w-full max-w-2xl bg-[#FBE9D0] px-4 py-0 text-[#E64833] shadow-lg">
+        <div className="block w-full max-w-2xl bg-[#FBE9D0] px-4 py-2 text-[#E64833] shadow-lg">
           <h3 className="text-xl md:text-3xl flex h-14 items-center font-bold">
             Projects
             <span className="blinking-dot">.</span>
@@ -142,7 +142,6 @@ function App() {
           <div className="mb-4 space-y-4 text-black">
             <article>
               <h4 className="font-bold">Flappy Bird Game · C++, SDL</h4>
-              <p className="text-sm italic">July 2026 – Present</p>
               <ul className="list-disc pl-5">
                 <li>
                   Set up SDL, created the game window and renderer, and loaded
@@ -159,19 +158,26 @@ function App() {
                   Utilized object-oriented programming methods to build and run
                   the game.
                 </li>
+                <li>
+                  <a
+                    href="https://github.com/pxtrickt/Flappy-Bird-Game"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <u>Repository</u>
+                  </a>
+                </li>
               </ul>
             </article>
-
             <article>
               <h4 className="font-bold">Coming Soon · Kotlin</h4>
-              <p className="text-sm italic">September 2026-</p>
             </article>
           </div>
         </div>
       </section>
 
       <section>
-        <div className="block w-full max-w-2xl bg-[#FBE9D0] px-4 py-0 text-[#E64833] shadow-lg">
+        <div className="block w-full max-w-2xl bg-[#FBE9D0] px-4 py-2 text-[#E64833] shadow-lg">
           <h3 className="text-xl md:text-3xl flex h-14 items-center font-bold">
             Hobbies
             <span className="blinking-dot">.</span>
@@ -187,6 +193,26 @@ function App() {
                 <li>Performed in an array of bands and orchestras.</li>
                 <li>ATCL Drum Kit Diploma - Mar 2024.</li>
                 <li>ABRSM Percussion Diploma - Mar 2024.</li>
+              </ul>
+            </article>
+            <article>
+              <h4 className="font-bold">Football</h4>
+              <ul className="list-disc pl-5">
+                <li>Lifelong Arsenal fan.</li>
+              </ul>
+            </article>
+            <article>
+              <h4 className="font-bold">Cooking</h4>
+              <ul className="list-disc pl-5">
+                <li>Enjoy making a variety of dishes to keep me through uni.</li>
+              </ul>
+            </article>
+            <article>
+              <h4 className="font-bold">Video Games</h4>
+              <ul className="list-disc pl-5">
+                <li>Football Manager 26</li>
+                <li>Overwatch</li>
+                <li>Clair Obscure Expedition 33</li>
               </ul>
             </article>
           </div>
