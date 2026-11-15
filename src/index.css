@@ -14,12 +14,10 @@ html, body {
     transparent 50%
   );
   background-size: 100% 4px;
+    overflow-x: hidden;
 }
 
 code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-
-
-
